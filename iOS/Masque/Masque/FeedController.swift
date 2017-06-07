@@ -18,7 +18,7 @@ import FirebaseAuth
 class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
-    let USCcellId = "USCcellId"
+    let FBFeedCell2 = "FBFeedCell"
     let titles = ["LGBT Events Near Me", " LGBT Events"]
     
     
@@ -26,7 +26,7 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         FBSDKAccessToken.setCurrent(nil)
         
         do {
-            try FIRAuth.auth()?.signOut()
+            try Auth.auth().signOut()
         } catch let logoutError {
             print(logoutError)
         }
@@ -65,8 +65,8 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func handleChat(){
-        let messagesController = MessagesController()
-        navigationController?.pushViewController(messagesController, animated: true)
+//        let messagesController = MessagesController()
+//        navigationController?.pushViewController(messagesController, animated: true)
         
         print("touched chat")
     }
@@ -108,7 +108,6 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         setupCollectionView()
         
-        //menu bar is the way to switch between nearby events / usc specific events
         setupMenuBar()
     }
     
@@ -146,7 +145,7 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.superview?.superview?.backgroundColor = .yellow
         //        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(NearMeCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView?.register(USCFeedCell.self, forCellWithReuseIdentifier: USCcellId)
+        collectionView?.register(FBFeedCell.self, forCellWithReuseIdentifier: FBFeedCell2)
         
         //spacing at the bot/top
         collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 65, 0)
@@ -191,7 +190,7 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.item == 1 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: USCcellId, for: indexPath)
+            return collectionView.dequeueReusableCell(withReuseIdentifier: FBFeedCell2, for: indexPath)
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! NearMeCell
         cell.feedController = self
