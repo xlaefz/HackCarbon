@@ -1,0 +1,16 @@
+{
+  "name": "masque-server",
+  "version": "1.0.0",
+  "description": "Carbon 2017 Masque server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
