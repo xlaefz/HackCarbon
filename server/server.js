@@ -3,6 +3,7 @@ var app = express()
 var router = express.Router()
 var body_parser = require('body-parser')
 var firebase_admin = require('firebase-admin');
+var sent = require('sentiment')
 
 // Include constants
 
@@ -53,6 +54,24 @@ router.get('/animal_name', function(request, response) {
 		"status": "success",
 		"data": {
 			"generated_name": generated_name
+		},
+		"message": null
+	})
+})
+
+router.get('/validate_chat', function(request, response) {
+	var bad_message = false
+
+	var score = sent(request.body.text).score
+	console.log("The score for this message is " + score)
+	if (score <= -2) {
+		bad_message = true
+	}
+
+	response.json({
+		"status": "success",
+		"data": {
+			"bad_message": bad_message
 		},
 		"message": null
 	})
