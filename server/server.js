@@ -17,19 +17,26 @@ var service_account = require('./serviceAccountKey.json')
 
 firebase_admin.initializeApp({
 	credential: firebase_admin.credential.cert(service_account),
-	databaseURL: 'hackcarbon-masque.firebaseapp.com'
+	databaseURL: 'hackcarbon-masque.firebaseio.com'
 })
+
 
 var db = firebase_admin.database()
-var ref = db.ref("/users")
+var ref = db.ref("users")
 
-ref.once("value", function(snapshot) {
-	console.log(snapshot.val());
-})
+console.log("Getting users")
+
+
 
 app.set('port', (process.env.PORT || 5000))
 
 app.use('/api/v1', router)
+
+ref.on("value", function(snapshot) {
+  console.log(snapshot.val());
+}, function (errorObject) {
+  console.log("The read failed: " + errorObject.code);
+});
 
 app.get('/', function(request, response) {
 	response.send('Please connect to /api/v1/{endpoint}')
