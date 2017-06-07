@@ -1,0 +1,4 @@
+GayStarNews/events
+
+
+endpoint to hit for news events

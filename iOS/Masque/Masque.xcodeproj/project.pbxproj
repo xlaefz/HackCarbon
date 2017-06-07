@@ -25,6 +25,7 @@
 		88FE372F1EE8484F00F7AE89 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88FE37291EE8484F00F7AE89 /* FBSDKCoreKit.framework */; };
 		88FE37301EE8484F00F7AE89 /* Pods_Masque.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88FE372A1EE8484F00F7AE89 /* Pods_Masque.framework */; };
 		88FE37321EE849A100F7AE89 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE37311EE849A100F7AE89 /* MainNavigationController.swift */; };
+		88FE37341EE84F8500F7AE89 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE37331EE84F8500F7AE89 /* FeedController.swift */; };
 		A3321B1A3EA2A3FB2D550F1B /* Pods_MasqueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335398C1FE078C88D7D3CB90 /* Pods_MasqueTests.framework */; };
 		F1A090FF53B1673C4B1F1EB0 /* Pods_Masque.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B750C38F3AE686489AD3CD7A /* Pods_Masque.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		88FE37291EE8484F00F7AE89 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		88FE372A1EE8484F00F7AE89 /* Pods_Masque.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods_Masque.framework; sourceTree = "<group>"; };
 		88FE37311EE849A100F7AE89 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		88FE37331EE84F8500F7AE89 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		B750C38F3AE686489AD3CD7A /* Pods_Masque.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Masque.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0E9AAC4C57FB4419D46F17 /* Pods_MasqueUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasqueUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,8 +161,8 @@
 			children = (
 				88FE371A1EE846DE00F7AE89 /* FaceBook.entitlements */,
 				88FE36E71EE840A200F7AE89 /* AppDelegate.swift */,
-				88FE371B1EE8470800F7AE89 /* Classes */,
 				88FE36EB1EE840A200F7AE89 /* Main.storyboard */,
+				88FE371B1EE8470800F7AE89 /* Classes */,
 				88FE36F11EE840A200F7AE89 /* Assets.xcassets */,
 				88FE36F31EE840A200F7AE89 /* LaunchScreen.storyboard */,
 				88FE36F61EE840A200F7AE89 /* Info.plist */,
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				88FE37311EE849A100F7AE89 /* MainNavigationController.swift */,
+				88FE37331EE84F8500F7AE89 /* FeedController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88FE37321EE849A100F7AE89 /* MainNavigationController.swift in Sources */,
+				88FE37341EE84F8500F7AE89 /* FeedController.swift in Sources */,
 				88FE37241EE8474200F7AE89 /* LocationHandler.swift in Sources */,
 				88FE36E81EE840A200F7AE89 /* AppDelegate.swift in Sources */,
 				88FE36F01EE840A200F7AE89 /* Masque.xcdatamodeld in Sources */,
