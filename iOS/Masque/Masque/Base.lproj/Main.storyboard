@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Masque" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,5 +28,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Resources View Controller-->
+        <scene sceneID="Db2-Uu-95p">
+            <objects>
+                <viewController id="62O-sO-fbc" customClass="ResourcesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="70J-Du-xvY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qyb-GD-OcM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PN4-wZ-6u7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSf-ug-jHd" userLabel="Support Button" customClass="RoundButton" customModule="Masque" customModuleProvider="target">
+                                <rect key="frame" x="13" y="8" width="166" height="189"/>
+                                <color key="backgroundColor" red="1" green="0.50588235294117645" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="PmX-pc-3gZ"/>
+                                    <constraint firstAttribute="height" constant="196" id="Y6T-O4-u7q"/>
+                                </constraints>
+                                <state key="normal" image="heart"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KW-ma-meI" userLabel="Music Button" customClass="RoundButton" customModule="Masque" customModuleProvider="target">
+                                <rect key="frame" x="187" y="8" width="176" height="188"/>
+                                <color key="backgroundColor" red="0.49803921568627452" green="0.82352941176470584" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="jBb-BF-nLc"/>
+                                </constraints>
+                                <state key="normal" image="music"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRP-RT-B2w" userLabel="Health Button" customClass="RoundButton" customModule="Masque" customModuleProvider="target">
+                                <rect key="frame" x="13" y="204" width="166" height="196"/>
+                                <color key="backgroundColor" red="0.60784313725490191" green="0.87058823529411766" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="health"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jO3-bY-b7H" userLabel="Hobbies Button" customClass="RoundButton" customModule="Masque" customModuleProvider="target">
+                                <rect key="frame" x="187" y="204" width="188" height="196"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.85882352941176465" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="hobbies"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Support" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPR-Vz-cvg">
+                                <rect key="frame" x="16" y="146" width="163" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUH-Ur-epX">
+                                <rect key="frame" x="200" y="146" width="163" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hobbies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9S-D4-WcG">
+                                <rect key="frame" x="200" y="350" width="163" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkv-XI-cVr">
+                                <rect key="frame" x="13" y="350" width="163" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kRP-RT-B2w" firstAttribute="baseline" secondItem="jO3-bY-b7H" secondAttribute="firstBaseline" id="28S-oN-DEc"/>
+                            <constraint firstItem="gSf-ug-jHd" firstAttribute="top" secondItem="PN4-wZ-6u7" secondAttribute="top" id="2Su-UN-faJ"/>
+                            <constraint firstItem="1KW-ma-meI" firstAttribute="trailing" secondItem="jO3-bY-b7H" secondAttribute="trailing" id="35m-ez-8ah"/>
+                            <constraint firstItem="gSf-ug-jHd" firstAttribute="leading" secondItem="PN4-wZ-6u7" secondAttribute="leading" id="6oR-Tx-mbO"/>
+                            <constraint firstItem="1KW-ma-meI" firstAttribute="baseline" secondItem="gSf-ug-jHd" secondAttribute="firstBaseline" id="8AN-P4-edT"/>
+                            <constraint firstAttribute="trailing" secondItem="1KW-ma-meI" secondAttribute="trailing" id="8Ul-ZU-YYg"/>
+                            <constraint firstItem="gSf-ug-jHd" firstAttribute="trailing" secondItem="kRP-RT-B2w" secondAttribute="trailing" id="8Vi-Bz-50a"/>
+                            <constraint firstItem="gSf-ug-jHd" firstAttribute="baseline" secondItem="1KW-ma-meI" secondAttribute="firstBaseline" id="H2Q-4N-Bpu"/>
+                            <constraint firstItem="gSf-ug-jHd" firstAttribute="top" secondItem="1KW-ma-meI" secondAttribute="top" id="IXc-RF-NaX"/>
+                            <constraint firstItem="kRP-RT-B2w" firstAttribute="top" secondItem="gSf-ug-jHd" secondAttribute="bottom" constant="8" symbolic="YES" id="aUD-wR-mIc"/>
+                            <constraint firstItem="gSf-ug-jHd" firstAttribute="leading" secondItem="kRP-RT-B2w" secondAttribute="leading" id="aVg-ho-gUP"/>
+                            <constraint firstItem="jO3-bY-b7H" firstAttribute="baseline" secondItem="kRP-RT-B2w" secondAttribute="firstBaseline" id="ewg-nb-Wgp"/>
+                            <constraint firstItem="1KW-ma-meI" firstAttribute="leading" secondItem="jO3-bY-b7H" secondAttribute="leading" id="pjl-ch-Za0"/>
+                            <constraint firstItem="Qyb-GD-OcM" firstAttribute="top" secondItem="kRP-RT-B2w" secondAttribute="bottom" constant="267" id="sS1-Th-5ZX"/>
+                            <constraint firstItem="kRP-RT-B2w" firstAttribute="top" secondItem="jO3-bY-b7H" secondAttribute="top" id="yCs-XA-XDJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUu-zW-GcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="112.89355322338831"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="health" width="83" height="83"/>
+        <image name="heart" width="88" height="75"/>
+        <image name="hobbies" width="68" height="81"/>
+        <image name="music" width="84" height="84"/>
+    </resources>
 </document>

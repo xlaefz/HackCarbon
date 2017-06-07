@@ -92,17 +92,17 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         //settings button
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: settingsIcon, style: .plain, target: self, action: #selector(handleSettings))
         
-        //chat button
-        let chatButton = UIButton(frame: CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height, width: self.view.bounds.width, height: 50))
-        chatButton.setTitle("Chat With Us", for: .normal)
-        if let image = UIImage(named: "chatbutton"){
-            chatButton.setImage(image, for: .normal)
-        }
-        chatButton.backgroundColor = .red
-        chatButton.addTarget(self, action: #selector(handleChat), for: .touchUpInside)
-        
-        self.view.addSubview(chatButton)
-        _ = chatButton.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 15, bottomConstant: 15, rightConstant: 15, widthConstant: 0, heightConstant: 50)
+//        //chat button
+//        let chatButton = UIButton(frame: CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height, width: self.view.bounds.width, height: 50))
+//        chatButton.setTitle("Chat With Us", for: .normal)
+//        if let image = UIImage(named: "chatbutton"){
+//            chatButton.setImage(image, for: .normal)
+//        }
+//        chatButton.backgroundColor = .red
+//        chatButton.addTarget(self, action: #selector(handleChat), for: .touchUpInside)
+//        
+//        self.view.addSubview(chatButton)
+//        _ = chatButton.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 15, bottomConstant: 15, rightConstant: 15, widthConstant: 0, heightConstant: 50)
         
         self.navigationController?.navigationBar.isTranslucent = false
         
@@ -148,8 +148,8 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.register(FBFeedCell.self, forCellWithReuseIdentifier: FBFeedCell2)
         
         //spacing at the bot/top
-        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 65, 0)
-        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 65, 0)
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
         collectionView?.clipsToBounds = false
         collectionView?.isPagingEnabled = true
     }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		32C3D25CA4643356F725092E /* Pods_MasqueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0E9AAC4C57FB4419D46F17 /* Pods_MasqueUITests.framework */; };
+		8836F4911EE88786002FED61 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F4901EE88786002FED61 /* ResourcesViewController.swift */; };
+		8836F4931EE88E3E002FED61 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F4921EE88E3E002FED61 /* RoundButton.swift */; };
 		88FE36E81EE840A200F7AE89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE36E71EE840A200F7AE89 /* AppDelegate.swift */; };
 		88FE36ED1EE840A200F7AE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FE36EB1EE840A200F7AE89 /* Main.storyboard */; };
 		88FE36F01EE840A200F7AE89 /* Masque.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88FE36EE1EE840A200F7AE89 /* Masque.xcdatamodeld */; };
@@ -68,6 +70,8 @@
 		67E7AF988C2D67DC9AEB237F /* Pods-MasqueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasqueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasqueTests/Pods-MasqueTests.release.xcconfig"; sourceTree = "<group>"; };
 		7507320A5C57C45F71AC1F7C /* Pods-Masque.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Masque.release.xcconfig"; path = "Pods/Target Support Files/Pods-Masque/Pods-Masque.release.xcconfig"; sourceTree = "<group>"; };
 		7756827F0F2FEB456EAD8D38 /* Pods-MasqueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasqueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasqueTests/Pods-MasqueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8836F4901EE88786002FED61 /* ResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		8836F4921EE88E3E002FED61 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		88FE36E41EE840A200F7AE89 /* Masque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FE36E71EE840A200F7AE89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FE36EC1EE840A200F7AE89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -253,6 +257,7 @@
 				88FE37331EE84F8500F7AE89 /* FeedController.swift */,
 				88FE37351EE8525B00F7AE89 /* LoginController.swift */,
 				88FE37371EE852B900F7AE89 /* SettingsLauncher.swift */,
+				8836F4901EE88786002FED61 /* ResourcesViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			children = (
 				88FE37211EE8474200F7AE89 /* Extensions.swift */,
 				88FE37221EE8474200F7AE89 /* LocationHandler.swift */,
+				8836F4921EE88E3E002FED61 /* RoundButton.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -585,9 +591,11 @@
 				88FE36E81EE840A200F7AE89 /* AppDelegate.swift in Sources */,
 				88FE37871EE8600200F7AE89 /* NearMeCell.swift in Sources */,
 				88FE37381EE852B900F7AE89 /* SettingsLauncher.swift in Sources */,
+				8836F4931EE88E3E002FED61 /* RoundButton.swift in Sources */,
 				88FE373A1EE8535500F7AE89 /* Page.swift in Sources */,
 				88FE36F01EE840A200F7AE89 /* Masque.xcdatamodeld in Sources */,
 				88FE378B1EE86AD300F7AE89 /* SettingCell.swift in Sources */,
+				8836F4911EE88786002FED61 /* ResourcesViewController.swift in Sources */,
 				88FE37811EE85FB200F7AE89 /* FeedCell.swift in Sources */,
 				88FE37851EE85FEC00F7AE89 /* UserCell.swift in Sources */,
 				88FE37231EE8474200F7AE89 /* Extensions.swift in Sources */,
