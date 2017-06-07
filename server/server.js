@@ -3,15 +3,14 @@ var app = express()
 var router = express.Router()
 var body_parser = require('body-parser')
 var firebase_admin = require('firebase-admin');
+var sent = require('sentiment')
 
 // Include constants
 
 var constants = require('./constants.js')
 var const_animals = constants.animals
 var const_adjectives = constants.adjectives
-const textAnalytics = new cognitiveServices.textAnalytics({
-    API_KEY: yourApiKey
-})
+
 
 // Set up Firebase
 
@@ -63,14 +62,11 @@ router.get('/animal_name', function(request, response) {
 router.get('/validate_chat', function(request, response) {
 	var bad_message = false
 
-	textAnalytics.sentiment()
-    .then((response) => {
-        console.log('Got response', response);
-    })
-    .catch((err) => {
-        console.error('Encountered error making request:', err);
-    });
-
+	var score = sent(request.body.text).score
+	console.log("The score for this message is " + score)
+	if (score <= -2) {
+		bad_message = true
+	}
 
 	response.json({
 		"status": "success",
