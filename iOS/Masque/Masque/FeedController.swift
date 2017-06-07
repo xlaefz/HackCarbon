@@ -48,20 +48,14 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func showControllerForSetting(setting: Setting){
-        let dummySettingsViewController = UIViewController()
-        dummySettingsViewController.view.backgroundColor = .white
-        dummySettingsViewController.navigationItem.title = setting.name
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.pushViewController(dummySettingsViewController, animated: true)
-        let imageView:UIImageView!
+        let resourcesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "resources")
         if(setting.name == "LGBT Resources"){
-            imageView = UIImageView(image: UIImage(named:"puripuri"))
+//            imageView = UIImageView(image: UIImage(named:"puripuri"))
+            self.navigationController?.pushViewController(resourcesViewController, animated: true)
         }else{
-            imageView = UIImageView(image: UIImage(named:"saitama"))
+//            imageView = UIImageView(image: UIImage(named:"saitama"))
         }
-        dummySettingsViewController.view.addSubview(imageView)
-        
-        _ = imageView.anchor(dummySettingsViewController.view.topAnchor, left: dummySettingsViewController.view.leftAnchor, bottom: dummySettingsViewController.view.bottomAnchor, right: dummySettingsViewController.view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
     
     func handleChat(){
@@ -92,17 +86,17 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         //settings button
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: settingsIcon, style: .plain, target: self, action: #selector(handleSettings))
         
-//        //chat button
-//        let chatButton = UIButton(frame: CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height, width: self.view.bounds.width, height: 50))
-//        chatButton.setTitle("Chat With Us", for: .normal)
-//        if let image = UIImage(named: "chatbutton"){
-//            chatButton.setImage(image, for: .normal)
-//        }
-//        chatButton.backgroundColor = .red
-//        chatButton.addTarget(self, action: #selector(handleChat), for: .touchUpInside)
-//        
-//        self.view.addSubview(chatButton)
-//        _ = chatButton.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 15, bottomConstant: 15, rightConstant: 15, widthConstant: 0, heightConstant: 50)
+        //chat button
+        let chatButton = UIButton(frame: CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height, width: self.view.bounds.width, height: 50))
+        chatButton.setTitle("Chat With Us", for: .normal)
+        if let image = UIImage(named: "chatbutton"){
+            chatButton.setImage(image, for: .normal)
+        }
+        chatButton.backgroundColor = .red
+        chatButton.addTarget(self, action: #selector(handleChat), for: .touchUpInside)
+        
+        self.view.addSubview(chatButton)
+        _ = chatButton.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 15, bottomConstant: 15, rightConstant: 15, widthConstant: 0, heightConstant: 50)
         
         self.navigationController?.navigationBar.isTranslucent = false
         
@@ -148,8 +142,8 @@ class FeedController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.register(FBFeedCell.self, forCellWithReuseIdentifier: FBFeedCell2)
         
         //spacing at the bot/top
-        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
-        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 50, 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 50, 0)
         collectionView?.clipsToBounds = false
         collectionView?.isPagingEnabled = true
     }
