@@ -9,7 +9,9 @@ var firebase_admin = require('firebase-admin');
 var constants = require('./constants.js')
 var const_animals = constants.animals
 var const_adjectives = constants.adjectives
-
+const textAnalytics = new cognitiveServices.textAnalytics({
+    API_KEY: yourApiKey
+})
 
 // Set up Firebase
 
@@ -53,6 +55,27 @@ router.get('/animal_name', function(request, response) {
 		"status": "success",
 		"data": {
 			"generated_name": generated_name
+		},
+		"message": null
+	})
+})
+
+router.get('/validate_chat', function(request, response) {
+	var bad_message = false
+
+	textAnalytics.sentiment()
+    .then((response) => {
+        console.log('Got response', response);
+    })
+    .catch((err) => {
+        console.error('Encountered error making request:', err);
+    });
+
+
+	response.json({
+		"status": "success",
+		"data": {
+			"bad_message": bad_message
 		},
 		"message": null
 	})
