@@ -18,9 +18,6 @@ protocol LoginControllerDelegate: class {
 class LoginController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, LoginControllerDelegate, FBSDKLoginButtonDelegate {
     
     let loginManager = LocationHandler()
-    
-    
-    
     var pageControlBottomAnchor: NSLayoutConstraint?
     
     var image1 : UIImageView!

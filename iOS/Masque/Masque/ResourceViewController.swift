@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import Firebase
 
 class ResourceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private var channels: [Channel] = []
+    
+    @IBAction func healthTouched(_ sender: Any) {
+        let channel = channels[0]
+        self.performSegue(withIdentifier: "showHealth", sender: channel)
+    }
+    
     let tableData : [String] = [
+        "health",
         "dates & relationships",
         "workplace",
         "religion",
@@ -22,10 +31,28 @@ class ResourceViewController: UIViewController, UITableViewDelegate, UITableView
         "personal finance"
     ]
     
+    private lazy var channelRef: DatabaseReference = Database.database().reference().child("channels")
+
+    private var channelRefHandle: DatabaseHandle?
+    
+    func createChannel(_ name:String) {
+        let newChannelRef = channelRef.childByAutoId() // 2
+        let channelItem = [ // 3
+            "name": name
+        ]
+        newChannelRef.setValue(channelItem) // 4
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        for name in tableData{
+            createChannel(name)
+        }
+        channels.append(Channel(id: "Km4dT7M3yoIj3XGt8hg", name: "health"))
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,6 +85,17 @@ class ResourceViewController: UIViewController, UITableViewDelegate, UITableView
         return cell!
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let channel = sender as? Channel {
+            let chatVc = segue.destination as! ChatViewController
+            
+            chatVc.senderDisplayName = "Turtle"
+            chatVc.channel = channel
+            chatVc.channelRef = channelRef.child(channel.id)
+        }
+    }
 }
 
 

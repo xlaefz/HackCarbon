@@ -10,6 +10,8 @@
 		32C3D25CA4643356F725092E /* Pods_MasqueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0E9AAC4C57FB4419D46F17 /* Pods_MasqueUITests.framework */; };
 		8836F4911EE88786002FED61 /* ResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F4901EE88786002FED61 /* ResourceViewController.swift */; };
 		8836F4931EE88E3E002FED61 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F4921EE88E3E002FED61 /* RoundButton.swift */; };
+		8836F4951EE8E793002FED61 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F4941EE8E793002FED61 /* ChatViewController.swift */; };
+		8836F4971EE8E86D002FED61 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836F4961EE8E86D002FED61 /* Channel.swift */; };
 		88FE36E81EE840A200F7AE89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE36E71EE840A200F7AE89 /* AppDelegate.swift */; };
 		88FE36ED1EE840A200F7AE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FE36EB1EE840A200F7AE89 /* Main.storyboard */; };
 		88FE36F01EE840A200F7AE89 /* Masque.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88FE36EE1EE840A200F7AE89 /* Masque.xcdatamodeld */; };
@@ -72,6 +74,8 @@
 		7756827F0F2FEB456EAD8D38 /* Pods-MasqueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasqueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasqueTests/Pods-MasqueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8836F4901EE88786002FED61 /* ResourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceViewController.swift; sourceTree = "<group>"; };
 		8836F4921EE88E3E002FED61 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		8836F4941EE8E793002FED61 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8836F4961EE8E86D002FED61 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		88FE36E41EE840A200F7AE89 /* Masque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FE36E71EE840A200F7AE89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FE36EC1EE840A200F7AE89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 				88FE373B1EE8537400F7AE89 /* FeedClasses.swift */,
 				88FE373D1EE859B200F7AE89 /* SafeJsonObject.swift */,
 				88FE373F1EE859DB00F7AE89 /* User.swift */,
+				8836F4961EE8E86D002FED61 /* Channel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				88FE37351EE8525B00F7AE89 /* LoginController.swift */,
 				88FE37371EE852B900F7AE89 /* SettingsLauncher.swift */,
 				8836F4901EE88786002FED61 /* ResourceViewController.swift */,
+				8836F4941EE8E793002FED61 /* ChatViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 			files = (
 				88FE37321EE849A100F7AE89 /* MainNavigationController.swift in Sources */,
 				88FE37341EE84F8500F7AE89 /* FeedController.swift in Sources */,
+				8836F4951EE8E793002FED61 /* ChatViewController.swift in Sources */,
 				88FE37241EE8474200F7AE89 /* LocationHandler.swift in Sources */,
 				88FE37891EE8603100F7AE89 /* FBFeedCell.swift in Sources */,
 				88FE36E81EE840A200F7AE89 /* AppDelegate.swift in Sources */,
@@ -602,6 +609,7 @@
 				88FE377F1EE85F9400F7AE89 /* PageCell.swift in Sources */,
 				88FE37401EE859DB00F7AE89 /* User.swift in Sources */,
 				88FE373C1EE8537400F7AE89 /* FeedClasses.swift in Sources */,
+				8836F4971EE8E86D002FED61 /* Channel.swift in Sources */,
 				88FE37361EE8525B00F7AE89 /* LoginController.swift in Sources */,
 				88FE373E1EE859B200F7AE89 /* SafeJsonObject.swift in Sources */,
 				88FE37831EE85FD600F7AE89 /* MenuBar.swift in Sources */,

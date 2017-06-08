@@ -12,6 +12,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'SwiftyJSON'
 pod 'SCLAlertView'
+pod 'JSQMessagesViewController'
 
   target 'MasqueTests' do
     inherit! :search_paths

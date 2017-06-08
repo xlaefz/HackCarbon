@@ -30,7 +30,7 @@ class NearMeCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate
     
     override func setupViews() {
         super.setupViews()
-        print("THIS IS HIT AFTER LOGOUT")
+//        print("THIS IS HIT AFTER LOGOUT")
         self.locationManager.requestWhenInUseAuthorization()
         
         startUpdatingLocation()
@@ -182,7 +182,7 @@ class NearMeCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
-            print("THIS IS HIT AFTER LOGOUT 2")
+//            print("THIS IS HIT AFTER LOGOUT 2")
             if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
                 CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorized){
                 currentLocation = locationManager.location!
@@ -213,7 +213,7 @@ class NearMeCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate
         let location = locations.last
         self.getCityFromLocation(location: location!)
         self.stopUpdatingLocation()
-        print("HIT LOCATION MANAGER FIRST")
+//        print("HIT LOCATION MANAGER FIRST")
         
     }
     

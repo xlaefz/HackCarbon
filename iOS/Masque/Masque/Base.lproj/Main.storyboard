@@ -78,6 +78,10 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="health"/>
+                                <connections>
+                                    <action selector="healthTouched:" destination="62O-sO-fbc" eventType="touchUpInside" id="wmV-Ll-feM"/>
+                                    <segue destination="td3-Il-YuX" kind="presentation" identifier="showHealth" id="3vN-VH-nzO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkv-XI-cVr">
                                 <rect key="frame" x="11" y="298" width="163" height="50"/>
@@ -162,6 +166,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUu-zW-GcA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918" y="38"/>
+        </scene>
+        <!--ChatViewController-->
+        <scene sceneID="Eby-El-5MD">
+            <objects>
+                <viewController id="td3-Il-YuX" userLabel="ChatViewController" customClass="ChatViewController" customModule="Masque" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yoN-fC-MCZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="bVQ-4U-gtG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eWz-m0-a3j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JFf-Ed-TbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853" y="33"/>
         </scene>
     </scenes>
     <resources>
