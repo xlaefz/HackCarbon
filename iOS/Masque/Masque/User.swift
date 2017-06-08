@@ -13,6 +13,10 @@ class User: NSObject {
     var name: String?
     var email: String?
     var profileImageUrl: String?
+    override init(){
+        
+    }
+    
     init(dictionary: [String: AnyObject]) {
         self.id = dictionary["id"] as? String
         self.name = dictionary["name"] as? String

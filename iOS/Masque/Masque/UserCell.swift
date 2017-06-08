@@ -11,42 +11,42 @@ import Firebase
 
 class UserCell: UITableViewCell {
     
-//    var message: Message? {
-//        didSet {
-//            setupNameAndProfileImage()
-//            
-//            detailTextLabel?.text = message?.text
-//            
-//            if let seconds = message?.timestamp?.doubleValue {
-//                let timestampDate = Date(timeIntervalSince1970: seconds)
-//                
-//                let dateFormatter = DateFormatter()
-//                dateFormatter.dateFormat = "hh:mm:ss a"
-//                timeLabel.text = dateFormatter.string(from: timestampDate)
-//            }
-//            
-//            
-//        }
-//    }
+    var message: Message? {
+        didSet {
+            setupNameAndProfileImage()
+            
+            detailTextLabel?.text = message?.text
+            
+            if let seconds = message?.timestamp?.doubleValue {
+                let timestampDate = Date(timeIntervalSince1970: seconds)
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "hh:mm:ss a"
+                timeLabel.text = dateFormatter.string(from: timestampDate)
+            }
+            
+            
+        }
+    }
     
-//    fileprivate func setupNameAndProfileImage() {
-//        
-//        if let id = message?.chatPartnerId() {
-//            let ref = FIRDatabase.database().reference().child("users").child(id)
-//            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//                
-//                if let dictionary = snapshot.value as? [String: AnyObject] {
-//                    //                    self.textLabel?.text = dictionary["name"] as? String
-//                    self.textLabel?.text = "Anonymous"
-//                    if let profileImageUrl = dictionary["profileImageUrl"] as? String {
-//                        self.profileImageView.loadImageUsingCacheWithUrlString(profileImageUrl)
-//                    }
-//                }
-//                
-//            }, withCancel: nil)
-//        }
-//    }
-//    
+    fileprivate func setupNameAndProfileImage() {
+        
+        if let id = message?.chatPartnerId() {
+            let ref = Database.database().reference().child("users").child(id)
+            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    //                    self.textLabel?.text = dictionary["name"] as? String
+                    self.textLabel?.text = "Anonymous"
+                    if let profileImageUrl = dictionary["profileImageUrl"] as? String {
+                        self.profileImageView.loadImageUsingCacheWithUrlString(profileImageUrl)
+                    }
+                }
+                
+            }, withCancel: nil)
+        }
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         

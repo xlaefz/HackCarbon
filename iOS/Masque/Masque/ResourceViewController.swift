@@ -16,8 +16,18 @@ class ResourceViewController: UIViewController, UITableViewDelegate, UITableView
     private var channels: [Channel] = []
     
     @IBAction func healthTouched(_ sender: Any) {
-        let channel = channels[0]
-        self.performSegue(withIdentifier: "showHealth", sender: channel)
+
+//        let messagesController = MessagesController()
+//        navigationController?.pushViewController(messagesController, animated: false)
+//        messagesController.handleNewMessage()
+//        
+        let chatLogController = ChatLogController(collectionViewLayout:UICollectionViewFlowLayout())
+        let chat_group = User()
+        chat_group.name = "Anonymous penis"
+        chat_group.id = "73KByZsQzjXXaIiwrSVKT73AkGq3"
+        chatLogController.user = chat_group
+        navigationController?.pushViewController(chatLogController, animated: true)
+        print("touched chat")
     }
     
     let tableData : [String] = [
@@ -46,9 +56,9 @@ class ResourceViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for name in tableData{
-            createChannel(name)
-        }
+//        for name in tableData{
+//            createChannel(name)
+//        }
         channels.append(Channel(id: "Km4dT7M3yoIj3XGt8hg", name: "health"))
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -88,13 +98,13 @@ class ResourceViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        if let channel = sender as? Channel {
-            let chatVc = segue.destination as! ChatViewController
-            
-            chatVc.senderDisplayName = "Turtle"
-            chatVc.channel = channel
-            chatVc.channelRef = channelRef.child(channel.id)
-        }
+//        if let channel = sender as? Channel {
+//            let chatVc = segue.destination as! ChatViewController
+//            
+//            chatVc.senderDisplayName = "Turtle"
+//            chatVc.channel = channel
+//            chatVc.channelRef = channelRef.child(channel.id)
+//        }
     }
 }
 

@@ -31,9 +31,9 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         self.navigationController?.setToolbarHidden(true, animated: true)
         self.navigationController?.isNavigationBarHidden = true
         //Background Images
-        image1 = UIImageView(image: UIImage(named: "page1"))
-        image2 = UIImageView(image: UIImage(named: "page2"))
-        image3 = UIImageView(image: UIImage(named: "page3"))
+        image1 = UIImageView(image: UIImage(named: "test"))
+        image2 = UIImageView(image: UIImage(named: "test2"))
+        image3 = UIImageView(image: UIImage(named: "test3"))
         
         //set opacity of background images
         image2.alpha = 0
@@ -59,7 +59,7 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         //        view.addSubview(loginButton)
         
         //page control constraints
-        pageControlBottomAnchor = pageControl.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 300, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
+//        pageControlBottomAnchor = pageControl.anchor(customFBButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 15, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
         
         //collectionView constraints
         collectionView.anchorToTop(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
@@ -82,12 +82,15 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         registerLabel.numberOfLines = 0
         registerLabel.textAlignment = NSTextAlignment.center
         registerLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        registerLabel.textColor = .white
-        registerLabel.text = "Please Register With Facebook To Use Our App"
+        registerLabel.textColor = UIColor(colorLiteralRed: 68, green: 198, blue: 211, alpha: 1)
+        registerLabel.text = ""
         registerLabel.font = UIFont(name: "BebasNueue", size: CGFloat(2))
         view.addSubview(registerLabel)
         
-        _ = customFBButton.anchor(pageControl.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 50, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: view.bounds.size.width - 64, heightConstant: 50)
+        _ = customFBButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 400, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: view.bounds.size.width - 64, heightConstant: 50)
+        
+        pageControlBottomAnchor = pageControl.anchor(customFBButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 15, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
+        
         _ = registerLabel.anchor(customFBButton.bottomAnchor, left:view.leftAnchor, bottom:nil, right:view.rightAnchor, topConstant: 0, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: view.bounds.size.width-64, heightConstant: 100)
         
         //background imageviews
@@ -156,11 +159,11 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     let loginCellId = "loginCellId"
     
     let pages: [Page] = {
-        let firstPage = Page(title: "Welcome To Masque", message: "An app built to support the LGBT community", imageName: "page1")
+        let firstPage = Page(title: "", message: "", imageName: "page1")
         
-        let secondPage = Page(title: "Events", message: "Scroll through the event feed to check out events tailored to you!", imageName: "page2")
+        let secondPage = Page(title: "", message: "", imageName: "page2")
         
-        let thirdPage = Page(title: "Anonymous Chat", message: "Come Chat and Build a Community!", imageName: "page3")
+        let thirdPage = Page(title: "", message: "", imageName: "page3")
         
         return [firstPage, secondPage, thirdPage]
     }()

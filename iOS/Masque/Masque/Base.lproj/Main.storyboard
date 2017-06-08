@@ -80,7 +80,6 @@
                                 <state key="normal" image="health"/>
                                 <connections>
                                     <action selector="healthTouched:" destination="62O-sO-fbc" eventType="touchUpInside" id="wmV-Ll-feM"/>
-                                    <segue destination="td3-Il-YuX" kind="presentation" identifier="showHealth" id="3vN-VH-nzO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkv-XI-cVr">
