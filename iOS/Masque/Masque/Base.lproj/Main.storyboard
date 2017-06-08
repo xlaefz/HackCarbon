@@ -112,6 +112,9 @@
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.85882352941176465" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="hobbies"/>
+                                <connections>
+                                    <segue destination="zHX-Zj-bTX" kind="push" id="dqv-Yn-cEd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hobbies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9S-D4-WcG">
                                 <rect key="frame" x="200" y="297" width="163" height="50"/>
@@ -166,29 +169,42 @@
             </objects>
             <point key="canvasLocation" x="918" y="38"/>
         </scene>
-        <!--ChatViewController-->
-        <scene sceneID="Eby-El-5MD">
+        <!--View Controller-->
+        <scene sceneID="Wf6-E6-cGa">
             <objects>
-                <viewController id="td3-Il-YuX" userLabel="ChatViewController" customClass="ChatViewController" customModule="Masque" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zHX-Zj-bTX" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yoN-fC-MCZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="bVQ-4U-gtG"/>
+                        <viewControllerLayoutGuide type="top" id="Qxr-45-krU"/>
+                        <viewControllerLayoutGuide type="bottom" id="jFe-Nf-Z7F"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eWz-m0-a3j">
+                    <view key="view" contentMode="scaleToFill" id="1x4-mU-LsH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hobbies-visible" translatesAutoresizingMaskIntoConstraints="NO" id="oie-SC-ewC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oie-SC-ewC" firstAttribute="top" secondItem="1x4-mU-LsH" secondAttribute="top" id="7d2-iW-z3k"/>
+                            <constraint firstItem="oie-SC-ewC" firstAttribute="bottom" secondItem="jFe-Nf-Z7F" secondAttribute="top" id="JHH-ue-YXY"/>
+                            <constraint firstAttribute="trailing" secondItem="oie-SC-ewC" secondAttribute="trailing" id="Xvw-1d-l7j"/>
+                            <constraint firstItem="oie-SC-ewC" firstAttribute="leading" secondItem="1x4-mU-LsH" secondAttribute="leading" id="gpO-WA-cON"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gML-fK-PCH"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JFf-Ed-TbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Zf-uq-HQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853" y="33"/>
+            <point key="canvasLocation" x="1784.8" y="24.7376311844078"/>
         </scene>
     </scenes>
     <resources>
         <image name="health" width="83" height="83"/>
         <image name="heart" width="88" height="75"/>
         <image name="hobbies" width="68" height="81"/>
+        <image name="hobbies-visible" width="750" height="1206"/>
         <image name="music" width="84" height="84"/>
     </resources>
 </document>
